@@ -1,0 +1,141 @@
+@keyframes fade_in {
+  0% {
+    transform: translateY(2vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0vh);
+    opacity: 1;
+  }
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  padding: 5vh 5vw;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: 540px) {
+    flex-direction: column;
+  }
+}
+
+.partition_left {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vw;
+}
+
+.partition_right {
+  flex: 0.5;
+  padding: 2vh 2vw;
+}
+
+.main_text {
+  font-size: calc(2.5vh + 2.5vw);
+  font-weight: 700;
+  line-height: 120%;
+  color: #33323a;
+  transform: translateY(2vh);
+  opacity: 0;
+  animation: fade_in 600ms ease-in-out 0.5s 1 forwards;
+}
+
+.sub_text {
+  margin-top: 3vh;
+  font-size: calc(4px + 1vh);
+  font-weight: 600;
+  line-height: 200%;
+  color: #5b5a61;
+  transform: translateY(2vh);
+  opacity: 0;
+  animation: fade_in 600ms ease-in-out 0.7s 1 forwards;
+}
+
+.hero_image {
+  width: 100%;
+  transform: translateY(2vh);
+  opacity: 0;
+  animation: fade_in 600ms ease-in-out 1.1s 1 forwards;
+}
+
+.buttons_row {
+  display: flex;
+  align-items: center;
+  margin-top: 3vh;
+  transform: translateY(2vh);
+  opacity: 0;
+  animation: fade_in 600ms ease-in-out 0.9s 1 forwards;
+}
+
+.button_get_started {
+  padding: 1.5vh 2vw;
+  font-size: calc(10px + 0.5vh);
+  font-weight: 600;
+  background-color: #2137cf;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 200ms, color 200ms, box-shadow 200ms, transform 150ms;
+
+  &:hover {
+    background-color: #334be2;
+    box-shadow: 0px 5px 10px rgba(#000, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.button_watch_video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2vh 1.5vw;
+  border: none;
+  border-radius: 100px;
+  background: transparent;
+  font-size: calc(10px + 0.5vh);
+  line-height: 1px;
+  font-weight: 600;
+  color: #2137cf;
+  cursor: pointer;
+  transition: background-color 200ms, color 200ms, box-shadow 200ms, transform 150ms;
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.integrations {
+  display: flex;
+  align-items: center;
+  margin-top: 12vh;
+  font-size: calc(4px + 1vh);
+  font-weight: 600;
+  color: #666;
+  transform: translateY(2vh);
+  opacity: 0;
+  animation: fade_in 600ms ease-in-out 1.1s 1 forwards;
+
+  @media only screen and (max-width: 540px) {
+    margin-top: 3vh;
+  }
+}
+
+.integration_brands {
+  opacity: 0.7;
+  width: 12vw;
+  margin-left: 2vw;
+
+  @media only screen and (max-width: 540px) {
+    width: 40vw;
+  }
+}
